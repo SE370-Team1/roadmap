@@ -1,0 +1,78 @@
+<!doctype html><meta charset="utf-8"><style>
+*{box-sizing:border-box}body{margin:0;width:2000px;background:#fbf9f5;font:20px "Segoe UI",-apple-system,Helvetica,Arial,sans-serif;color:#222;padding:36px 40px}
+h1{font-size:40px;margin:0 0 10px;font-weight:600}p{margin:4px 0;font-size:21px}.m{color:#777}
+.g{display:grid;grid-template-columns:220px 170px 130px repeat(10,1fr);gap:6px 6px;margin-top:26px;align-items:stretch}
+.band{border-radius:9px;color:#fff;text-align:center;padding:10px 4px;font-weight:600}
+.wk{font-weight:600;font-size:17px}.wk small{display:block;font-weight:400;color:#777;font-size:15px}
+.who{padding:14px 0 14px 8px;font-size:21px;font-weight:600}.who small{display:block;font-weight:400;color:#777;font-size:15px}
+.b{border-radius:8px;border:1.5px solid;padding:10px;font-size:17px;display:flex;align-items:center;min-height:74px}
+.a{background:#f8ded5;border-color:#df8a6b}.g2{background:#fdf1d0;border-color:#d9b24a}.bl{background:#d8e4f5;border-color:#7ea3dc}.gr{background:#d8eadf;border-color:#74b48e}.d{border-style:dashed;border-color:#3f9f6e;border-width:2.5px}
+.col{border:2.5px solid;border-radius:12px;display:flex;align-items:center;justify-content:center;text-align:center;line-height:1.7;font-size:18px;padding:8px}
+.mile{position:relative;height:96px;margin-top:22px;border-top:2px solid #c9c2b8}.d2{position:absolute;top:-11px;width:20px;height:20px;transform:rotate(45deg)}.lab{position:absolute;top:18px;transform:translateX(-50%);text-align:center;font-weight:600;font-size:18px;white-space:nowrap}.lab small{display:block;font-weight:400;color:#777;font-size:16px}
+.today{background:#c0392b;color:#fff;border-radius:6px;padding:3px 10px;font-size:16px}
+.box{background:#f1efea;border-radius:12px;padding:18px 24px;margin-top:10px;font-size:18px;line-height:1.5}.box b{display:inline-block;min-width:170px}
+body{position:relative}
+#todayLine{position:absolute;width:2px;background:#c0392b;pointer-events:none;z-index:5}
+#todayLine span{position:absolute;bottom:-30px;right:0;white-space:nowrap}
+</style>
+<h1>SE370 Team 1 roadmap: World layer 1, Zone 1, content complete Nov 22</h1>
+<p>The game: a co-op Roblox action game on floating sky islands. Players pick a soul and a weapon, fight monsters together and take down bosses.</p>
+<p class="m">How we build it: seven members, each owning one lane and building it with their own Claude coding agent. Nov 2 to 8 was an uncounted gap week, so dates from week 9 on moved one week.</p>
+<div class="g">
+<div></div>
+<div class="band" style="grid-column:2;background:#b8b2a7">Done</div>
+<div class="band" style="grid-column:3;background:#8a8f99">Setup</div>
+<div class="band" style="grid-column:4/6;background:#dd6b3d">MVP 1: the loop</div>
+<div class="band" style="grid-column:6/8;background:#3d7ad6">MVP 2: the world</div>
+<div class="band" style="grid-column:8/12;background:#3fa06e">Stretch, art and polish</div>
+<div class="band" style="grid-column:12/14;background:#8f6fc9">Freeze, report, presentation</div>
+
+<div></div><div class="wk" data-start="2026-09-07">Weeks 1 to 6<small>Sep 7 to Oct 18</small></div><div class="wk" data-start="2026-10-19">Week 7<small>Oct 19</small></div><div class="wk" data-start="2026-10-26">Week 8<small>Oct 26</small></div><div class="wk" data-start="2026-11-02">Gap week<small>Nov 2</small></div><div class="wk" data-start="2026-11-09">Week 9<small>Nov 9</small></div><div class="wk" data-start="2026-11-16">Week 10<small>Nov 16</small></div><div class="wk" data-start="2026-11-23">Week 11<small>Nov 23</small></div><div class="wk" data-start="2026-11-30">Week 12<small>Nov 30</small></div><div class="wk" data-start="2026-12-07">Week 13<small>Dec 7</small></div><div class="wk" data-start="2026-12-14">Week 14<small>Dec 14</small></div><div class="wk" data-start="2026-12-21">Week 15<small>Dec 21</small></div><div class="wk" data-start="2026-12-28">Week 16<small>Dec 28</small></div>
+
+<div class="who">Phát<small>Fight, monsters, lead</small></div>
+<div class="col" style="grid-column:2;grid-row:3/10;border-color:#b8b2a7;background:#ecebe5">Combat core<br>Movement: dash, climb, wall run<br>Camera<br>New game layer</div>
+<div class="col" style="grid-column:3;grid-row:3/10;border-color:#8a8f99;background:#eef0f2">Onboarding<br>File split<br>CI<br>Team rules</div>
+<div class="b a" style="grid-column:4">Toss, Brute</div><div class="b g2" style="grid-column:5">Brute on R6, soul drop</div><div class="b bl" style="grid-column:6/8">Brute rework, gems, refined soul forge, 2-player readback</div><div class="b gr" style="grid-column:8/12">Juice: hit feel, camera, duel, power beat</div>
+<div class="col" style="grid-column:12/14;grid-row:3/10;border-color:#8f6fc9;background:#ece6f7">Freeze:<br>bug fixes only<br>Report<br>Presentation</div>
+
+<div class="who" style="grid-column:1">Vũ<small>World and traversal</small></div><div class="b a" style="grid-column:4">Zone 1 greybox</div><div class="b g2" style="grid-column:5">Concept: hideout and world spot</div><div class="b bl" style="grid-column:6/8">Zone 1 from the picked concept: sites, wind edge</div><div class="b gr d" style="grid-column:8/10">Backdrop, flight (stretch)</div><div class="b gr" style="grid-column:10/12">World art pass</div>
+<div class="who" style="grid-column:1">Minh<small>Screens and UI</small></div><div class="b a" style="grid-column:4">Screens v0</div><div class="b g2" style="grid-column:5">Gate banners, run-end card</div><div class="b bl" style="grid-column:6/8">Drop, chest, forge screens</div><div class="b gr" style="grid-column:8/10">Hideout screens, touch</div><div class="b gr" style="grid-column:10/12">UI art pass</div>
+<div class="who" style="grid-column:1">Đạt<small>Monsters and gates</small></div><div class="b a" style="grid-column:4">Minion clips</div><div class="b g2" style="grid-column:5">Scroll, recording</div><div class="b bl" style="grid-column:6/8">Wave scaling, party panel, live checks</div><div class="b gr" style="grid-column:8/10">New monsters</div><div class="b gr" style="grid-column:10/12">Balance</div>
+<div class="who" style="grid-column:1">Mạnh<small>Balance and economy</small></div><div class="b a" style="grid-column:4">Merchant v0</div><div class="b g2" style="grid-column:5">Chests; concept: gate rooms</div><div class="b bl" style="grid-column:6/8">Gate shop, merchant and forge at camp, one run pays for a craft</div><div class="b gr" style="grid-column:8/10">Caps, analytics</div><div class="b gr" style="grid-column:10/12">Balance passes</div>
+<div class="who" style="grid-column:1">Quang Minh<small>Progression and quests</small></div><div class="b a" style="grid-column:4">Essence orb v0</div><div class="b g2" style="grid-column:5">Early exit; concept: Brute</div><div class="b bl" style="grid-column:6/8">Bag and stash, quests</div><div class="b gr" style="grid-column:8/10">Store, tutorial</div><div class="b gr" style="grid-column:10/12">Brute mesh from the picked board</div>
+<div class="who" style="grid-column:1">Kim<small>VFX and sound</small></div><div class="b a" style="grid-column:4">Effects port</div><div class="b g2" style="grid-column:5">Sound pass</div><div class="b bl" style="grid-column:6/8">Sound set 1, gate and soul sounds</div><div class="b gr" style="grid-column:8/10">Juice VFX</div><div class="b gr" style="grid-column:10/12">Effects art pass</div>
+</div>
+<div class="mile">
+<div class="d2" style="left:844px;background:#dd6b3d"></div><div class="lab" style="left:854px">MVP 1 shown<small>Nov 11</small></div>
+<div class="d2" style="left:1078px;background:#3d7ad6"></div><div class="lab" style="left:1088px">Content complete<small>Nov 22</small></div>
+<div class="d2" style="left:1634px;background:#3fa06e"></div><div class="lab" style="left:1644px">Final art<small>Dec 20</small></div>
+<div class="d2" style="left:1845px;background:#8f6fc9"></div><div class="lab" style="left:1855px">Presentation<small>week 16</small></div>
+</div>
+<div class="box"><b>MVP 1</b>two players: hideout, world, chest, scroll, gate, boss or leave early, loot, back to the world<br><b>Content complete</b>all of World layer 1, Zone 1 playable with its systems<br><b>Final art</b>every item has had its art pass<br><b>Dashed outline</b>a stretch goal, cut first if a lane runs late<br><b>Scope</b>in the course: World layer 1, Zone 1 and the systems it needs. Reserved for updates: the layers below, further zones, raids.</div>
+<div id="todayLine" hidden><span class="today"></span></div>
+<script>
+// Today in UTC+7 (Vietnam), whatever the viewer's clock says.
+const DAY = 86400000;
+const END = Date.UTC(2027, 0, 4); // the day after week 16
+function drawToday() {
+  const line = document.getElementById("todayLine");
+  const shifted = new Date(Date.now() + 7 * 3600000);
+  const today = Date.UTC(shifted.getUTCFullYear(), shifted.getUTCMonth(), shifted.getUTCDate());
+  const cols = [...document.querySelectorAll(".wk[data-start]")];
+  const index = cols.findLastIndex((c) => Date.parse(c.dataset.start) <= today);
+  line.hidden = index < 0 || today >= END;
+  if (line.hidden) return;
+  const col = cols[index].getBoundingClientRect();
+  const start = Date.parse(cols[index].dataset.start);
+  const next = cols[index + 1] ? Date.parse(cols[index + 1].dataset.start) : END;
+  const spot = col.left + col.width * ((today + DAY / 2 - start) / (next - start));
+  const bottom = document.querySelector(".mile").getBoundingClientRect().top;
+  line.style.left = spot + scrollX + "px";
+  line.style.top = col.top + scrollY + "px";
+  line.style.height = bottom - col.top + "px";
+  line.firstElementChild.textContent = "Today, " + shifted.toLocaleDateString("en-US", { month: "short", day: "numeric", timeZone: "UTC" });
+}
+drawToday();
+addEventListener("resize", drawToday);
+setInterval(drawToday, 60000);
+</script>
